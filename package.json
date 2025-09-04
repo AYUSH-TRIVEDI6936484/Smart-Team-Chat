@@ -1,0 +1,12 @@
+{
+  "name": "smart-team-chat",
+  "version": "1.0.0",
+  "description": "🚀 **Minimal React prototype** demonstrating how AI can enhance team communication with suggestions, summaries, and prompts.  \r *(Built as part of the “Intern Task – Smart Team Chat UI” assignment.)*",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
