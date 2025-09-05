@@ -33,7 +33,7 @@ export default function NewChat() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-2">
           <button
-            className="rounded-lg sm:rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-3 py-1.5 sm:py-2 text-sm sm:text-base"
+            className="rounded-lg sm:rounded-xl bg-slate-900 text-black dark:bg-white dark:text-slate-900 px-3 py-1.5 sm:py-2 text-sm sm:text-base"
             onClick={startNewChat}
           >
             Create
