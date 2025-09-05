@@ -20,34 +20,43 @@ export default function Sidebar() {
             <Icon name="plus" /> New
           </button>
         </div>
+
         <div className="p-4 space-y-4 flex-1 min-h-0 flex flex-col">
+          {/* Search */}
           <div className="relative">
+            <span className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+              <Icon name="search" className="h-5 w-5 text-slate-500" />
+            </span>
             <input
-              className="w-full rounded-xl border px-3 py-2 pl-9"
+              type="text"
+              className="w-full rounded-xl border pl-10 pr-3 py-2 text-sm placeholder-slate-400"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search"
             />
-            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none">
-              <Icon name="search" className="h-4 w-4" />
-            </div>
           </div>
 
+          {/* Tabs */}
           <div className="flex items-center gap-1 rounded-xl bg-slate-100 p-1 text-sm">
             <button
-              className={`flex-1 rounded-lg px-3 py-1.5 ${tab === "all" ? "bg-white shadow" : "hover:bg-white/50"}`}
+              className={`flex-1 rounded-lg px-3 py-1.5 ${
+                tab === "all" ? "bg-white shadow" : "hover:bg-white/50"
+              }`}
               onClick={() => setTab("all")}
             >
               All
             </button>
             <button
-              className={`flex-1 rounded-lg px-3 py-1.5 ${tab === "unread" ? "bg-white shadow" : "hover:bg-white/50"}`}
+              className={`flex-1 rounded-lg px-3 py-1.5 ${
+                tab === "unread" ? "bg-white shadow" : "hover:bg-white/50"
+              }`}
               onClick={() => setTab("unread")}
             >
               Unread
             </button>
           </div>
 
+          {/* Scrollable chat list */}
           <div className="flex-1 overflow-y-auto space-y-2 pr-1">
             {filteredChats.map((c) => {
               const { letter, cls } = avatarFor(c.name);

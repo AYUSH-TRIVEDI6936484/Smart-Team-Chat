@@ -11,28 +11,54 @@ No real backend or chat integration is included—only **placeholders** for AI-p
 
 ---
 
+## Install & Run
+- git clone https://github.com/AYUSH-TRIVEDI6936484/Smart-Team-Chat.git
+- cd smart-team-chat-ui
+- npm install
+- npm run dev
+
+## Folder Structure
+smart-team-chat-ui/
+├── src/
+│   ├── components/        # UI components (Sidebar, ChatWindow, Header, etc.)
+│   ├── context/           # ChatContext (state management)
+│   ├── data/              # Dummy JSON data
+│   ├── lib/               # Avatar + Icon utilities
+│   ├── App.jsx            # Main app container
+│   ├── main.jsx           # Entry point
+│   └── index.css          # Tailwind global styles
+├── package.json
+└── README.md
+
 ## 📱 Features (Deliverables)
 
 ### 1. Chat List
 - Displays dummy chat conversations (from JSON data).  
-- Shows **chat name, last message, and time**.
+- Shows **chat name, avatar, last message, and time**.  
+- Tabs for **All / Unread**.  
+- Search bar with icon.  
+- Scrollable list.
 
 ### 2. Chat Window
 - Displays dummy messages in a thread.  
 - Includes AI placeholder buttons:
   - **Summarize Thread** → shows a mock thread summary.  
-  - **Smart Reply Suggestion** → shows a placeholder reply suggestion.
+  - **Smart Reply Suggestion** → shows a placeholder reply suggestion.  
+- Auto-scrollable message area.
 
 ### 3. New Chat
-- Screen to start a new chat (enter participant name).  
+- Opens when clicking **+ New**.  
+- Enter participant name to create a chat.  
 - AI placeholder:
-  - **Generate Icebreaker** → generates a sample friendly intro message.
+  - **Generate Icebreaker** → generates a sample friendly intro message.  
+- Hidden until activated; dismissed with **Back** button.
 
 ---
 
 ## 🛠️ Tech Stack
 - **React (Web)** with Vite  
-- Pure CSS styling (no backend required)  
+- **Tailwind CSS** for styling  
+- **Context API** for state management  
 - Dummy data only  
 
 ---
@@ -44,40 +70,3 @@ No real backend or chat integration is included—only **placeholders** for AI-p
   Check version:
   ```bash
   node -v
-  ```
-
-### Install & Run
-```bash
-git clone https://github.com/your-username/smart-team-chat-ui.git
-cd smart-team-chat-ui
-npm install
-npm run dev
-```
-
-Then open [http://localhost:5173](http://localhost:5173) in your browser.
-
----
-
-## 📂 Project Structure
-```
-smart-team-chat-ui/
-├── src/
-│   ├── App.jsx     # Main prototype UI
-│   └── index.css   # Global styles
-├── package.json
-└── README.md
-```
-
----
-
-## ⚠️ Notes
-- **AI actions are mocked** (no real integration).  
-- Focus is on **UI/UX flow** and demonstrating where AI could fit.  
-
----
-
-## 🖼️ Demo Screens (Optional)
-You can add screenshots or GIFs here, for example:
-- `docs/chat-list.png`
-- `docs/chat-window.png`
-- `docs/new-chat.png`
